@@ -20,7 +20,7 @@ export const login = (nickname, email, password) => async (dispatch) =>{
         window.localStorage.setItem("auth", JSON.stringify(auth))
         window.localStorage.setItem("token", token)
 
-        dispatch(push(routes.feedPage))
+        dispatch(push(routes.home))
     }
     catch(error){
         console.error(error)
