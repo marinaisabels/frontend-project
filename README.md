@@ -2,7 +2,7 @@
 > Desenvolvimento de aplicações completas, incluindo frontend Web com React e backend com node.js.
 ______
 
-## Projeto Backend desenvolvido por Marina Isabel
+## Projeto Frontend desenvolvido por Marina Isabel
 - [Linkedin](https://www.linkedin.com/in/marinaisabel/)
 
 ______
