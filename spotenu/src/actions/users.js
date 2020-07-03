@@ -46,6 +46,7 @@ export const signupAdmin = (name, email, nickname, password) => async (dispatch)
         window.localStorage.setItem("token", token)
 
         alert('Conta criada com sucesso!')
+        dispatch(push(routes.login))
     }
     catch(error){
         console.error(error)

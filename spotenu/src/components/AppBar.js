@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
           <LogoSpotenu src={require("../image/iconspoti.png")}/>
             {props.pageName}
           </Typography>
+          <Button variant="outlined" color="inherit" onClick={props.onnClick}>{props.btnnText}</Button>
           <Button variant="outlined" color="inherit" onClick={props.onClick}>{props.btnText}</Button>
         </Toolbar>
       </AppBar>

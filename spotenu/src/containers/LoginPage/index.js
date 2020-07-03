@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
+
 import { push } from 'connected-react-router';
-
-
-
 import { routes } from '../Router'
+
 import ButtonAppBar from "../../components/AppBar";
 import ButtonStyle from '../../components/button'
 import MyTextField from '../../components/input'
 
-import { PageWrapper, ContentWrapper, FormStyle} from '../Style/styles'
+import { PageWrapper, ContentWrapper, FormStyle } from '../Style/styles'
+
 import { login } from "../../actions/users";
 
 
@@ -53,7 +53,14 @@ class LoginPage extends Component {
     render() {
         return (
             <PageWrapper>
-                <ButtonAppBar pageName='Spotenu' btnText='Acesso Administrador' onClick={this.props.goToRegisterPageAdmin}/>
+                <ButtonAppBar
+                    pageName=' Spotenu'
+                    btnText='Acesso Administrador'
+                    onClick={this.props.goToRegisterPageAdmin}
+                    btnnText='Cadastre a sua banda'
+                    onnClick={this.props.goToRegisterBand}
+                />
+                
                 <ContentWrapper>
                     <FormStyle onSubmit={this.handleSubmit}>
                         <MyTextField
@@ -69,7 +76,7 @@ class LoginPage extends Component {
                             label="Nickname"
                             required={true}
                             onChange={this.handleInputValue}
-                            value={this.state.form.nickname} />    
+                            value={this.state.form.nickname} />
                         <MyTextField
                             name="password"
                             type="password"
@@ -91,6 +98,7 @@ const mapDispatchToProps = dispatch => {
     return {
         goToRegisterPageAdmin: () => dispatch(push(routes.registerAdmin)),
         goToRegisterPage: () => dispatch(push(routes.register)),
+        goToRegisterBand: () => dispatch(push(routes.registerBand)),
         login: (form) => dispatch(login(form))
     }
 }
