@@ -110,7 +110,7 @@ class SignupBand extends Component {
             placeholder="Descreva a sua banda"
             required={true}
             onChange={this.handleInputValue}
-            value={this.state.form.nickname} />
+            value={this.state.form.description} />
           <MyPasswordInput
             name="password"
             id="password"
