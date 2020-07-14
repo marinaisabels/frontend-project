@@ -4,11 +4,10 @@ import { replace } from "connected-react-router";
 
 import { routes } from "../../containers/Router";
 
-import MyButton from "../../components/material/Button";
 import { MyInput, MyPasswordInput } from "../../components/material/Inputs";
 import MyPageTitle from "../../components/pageTitleBar";
 
-import { PageWrapper, FormStyle} from "../Style/styles"
+import { PageWrapper, FormStyle, ButtonSignup, Text} from "../Style/styles"
 import { signupBand } from "../../actions/users";
 
 
@@ -129,7 +128,8 @@ class SignupBand extends Component {
             showHelper
             onChange={this.handleInpuPasswordConfirm}
             value={this.state.passwordConfirm} />
-          <MyButton btnText='Criar' />
+          <ButtonSignup>INSCREVER-SE</ButtonSignup>
+          <Text>Já tem uma conta? <span onClick={this.props.goToLogin}><u>Faça Login</u></span></Text>
         </FormStyle>
       </PageWrapper>
     );
