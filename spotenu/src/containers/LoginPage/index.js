@@ -5,10 +5,9 @@ import { push } from 'connected-react-router';
 import { routes } from '../Router'
 
 import ButtonAppBar from "../../components/AppBar";
-import ButtonStyle from '../../components/button'
 import MyTextField from '../../components/input'
 
-import { PageWrapper, ContentWrapper, FormStyle } from '../Style/styles'
+import { PageWrapper, ContentWrapper, FormStyle, Button, Text } from '../Style/styles'
 
 import { login } from "../../actions/users";
 
@@ -85,8 +84,8 @@ class LoginPage extends Component {
                             onChange={this.handleInputValue}
                             value={this.state.form.password}
                         />
-                        <ButtonStyle type="submit" btnText="Entrar" />
-                        <h3>Não possui cadastro? <span onClick={this.props.goToRegisterPage}>Clique aqui</span></h3>
+                        <Button type="submit" btnText="Entrar">ENTRAR</Button>
+                        <Text>Não possui cadastro? <span onClick={this.props.goToRegisterPage}><u>Clique aqui</u></span></Text>
                     </FormStyle>
                 </ContentWrapper>
             </PageWrapper>

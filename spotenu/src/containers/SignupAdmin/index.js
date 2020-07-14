@@ -4,11 +4,11 @@ import { replace } from "connected-react-router";
 
 import { routes } from "../../containers/Router";
 
-import MyButton from "../../components/material/Button";
+
 import { MyInput, MyPasswordInput } from "../../components/material/Inputs";
 import MyPageTitle from "../../components/pageTitleBar";
 
-import { PageWrapper, FormStyle} from "../Style/styles"
+import { PageWrapper, FormStyle, ButtonSignup} from "../Style/styles"
 import { signupAdmin } from "../../actions/users";
 
 class SignupAdmin extends Component {
@@ -72,7 +72,7 @@ class SignupAdmin extends Component {
   render() {
     return (
       <PageWrapper>
-        <MyPageTitle showBack pageName='Cadastrar' />
+        <MyPageTitle showBack pageName='Acesso Administrativo' />
         <FormStyle onSubmit={this.handleSubmit}>
           <MyInput
             name="name"
@@ -116,7 +116,7 @@ class SignupAdmin extends Component {
             showHelper
             onChange={this.handleInpuPasswordConfirm}
             value={this.state.passwordConfirm} />
-          <MyButton btnText='Criar' />
+          <ButtonSignup>Crie e aguarde a solicitação</ButtonSignup>
         </FormStyle>
       </PageWrapper>
     );
