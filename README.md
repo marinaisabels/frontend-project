@@ -5,6 +5,7 @@ ______
 ## Projeto Frontend desenvolvido por Marina Isabel
 - [Linkedin](https://www.linkedin.com/in/marinaisabel/)
 
+status do projeto: Em andamento ⌛ 
 ______
 
 ### Projeto Spotenu 
